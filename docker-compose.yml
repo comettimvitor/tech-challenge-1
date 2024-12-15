@@ -1,0 +1,32 @@
+services:
+  postgres:
+    image: postgres:16.6
+    container_name: postgres16
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: techchallenge
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./scripts:/docker-entrypoint-initdb.d
+    restart: always
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: tech_challenge_1
+    ports:
+      - "8080:8080"
+    depends_on:
+      - postgres
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/techchallenge
+      SPRING_DATASOURCE_USERNAME: admin
+      SPRING_DATASOURCE_PASSWORD: admin
+    restart: always
+
+volumes:
+  postgres_data: {}
