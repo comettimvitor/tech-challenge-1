@@ -19,6 +19,6 @@ public class OpenApiConfig {
                         .description("Primeiro Tech Challenge da FIAP do curso de Arquitetura e Desenvolvimento Java.\n" +
                                 "API de cadastro de usuarios (clientes e donos de restaurante) para um sistema compartilhado de restaurantes.")
                         .version("v 0.0.1")
-                        .license(new License().name("Repositorio Github").url("https://github.com/comettimvitor")));
+                        .license(new License().name("Repositorio do Tech-Challenge 1 no Github").url("https://github.com/comettimvitor")));
     }
 }
