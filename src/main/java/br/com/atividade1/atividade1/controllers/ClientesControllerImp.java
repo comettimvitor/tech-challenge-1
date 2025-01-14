@@ -1,6 +1,6 @@
 package br.com.atividade1.atividade1.controllers;
 
-import br.com.atividade1.atividade1.controllers.swagger.ClientesApi;
+import br.com.atividade1.atividade1.controllers.ClientesController;
 import br.com.atividade1.atividade1.dtos.composedDTO.UsuarioClienteDTO;
 import br.com.atividade1.atividade1.entities.responses.SucessoResponse;
 import br.com.atividade1.atividade1.services.ClientesService;
@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/usuario/cliente")
-public class ClientesControllerImp implements ClientesApi {
+public class ClientesControllerImp implements ClientesController {
     private static final Logger LOGGER = LoggerFactory.getLogger(ClientesControllerImp.class);
 
     private final ClientesService clientesService;

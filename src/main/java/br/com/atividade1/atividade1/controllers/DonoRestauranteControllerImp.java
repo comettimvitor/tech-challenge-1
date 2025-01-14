@@ -1,6 +1,6 @@
 package br.com.atividade1.atividade1.controllers;
 
-import br.com.atividade1.atividade1.controllers.swagger.DonoRestauranteApi;
+import br.com.atividade1.atividade1.controllers.DonoRestauranteController;
 import br.com.atividade1.atividade1.dtos.composedDTO.UsuarioDonoRestauranteDTO;
 import br.com.atividade1.atividade1.entities.responses.SucessoResponse;
 import br.com.atividade1.atividade1.services.DonoRestauranteService;
@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/usuario/dono-restaurante")
-public class DonoRestauranteControllerImp implements DonoRestauranteApi {
+public class DonoRestauranteControllerImp implements DonoRestauranteController {
     private static final Logger LOGGER = LoggerFactory.getLogger(DonoRestauranteControllerImp.class);
 
     private final DonoRestauranteService donoRestauranteService;
